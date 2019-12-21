@@ -1,6 +1,6 @@
 Burger
 URL
-https://stark-island-90052.herokuapp.com/
+
 
 Description:
 Full-stack app using express, ORMs, MVCs, to handle routing and api calls. Mysql database is used to track app information. HTML generated using handlebars templates and partials.
