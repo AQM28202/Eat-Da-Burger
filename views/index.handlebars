@@ -1,0 +1,44 @@
+<div class='header text-center'>
+    <h1><strong>EAT - DA - BURGER!</strong></h1>
+    <p>Enter the name of a buger you want to eat, then press submit!</p>
+
+</div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+<div class="container text-center d-flex justify-content-center">
+    <div class="row">
+        
+        <div class="col-xs not-devoured-container" id='notDevouredContainer'>
+            {{#each notDevoured}}
+            <div class='not-devoured'>
+                <p>{{this.id}}. {{this.burger_name}}</p>
+                <button id='{{this.id}}' name='devourBtn' class='devourBtn btn btn-warning'>DEVOUR IT!</button>
+            </div>
+            {{/each}}
+        </div>
+
+        <div class="col-xs main">
+            <img src='file:///Users/anthonymcpherson/Eat-Da-Burger/public/img/burger.jpg'  alt="Burger Picture">
+            
+            
+            <p id='tooMuchOnPlate' class='tooMuchOnPlate err' ><strong>Finish what is on your plate before asking for another burger!</strong></p>
+            <p id='tooManyBurgers' class='tooManyBurgers err'><strong>The trash is full. Take out the garbage before adding any
+                more.</strong></p>
+            <p id='error' class="error err"><strong>Type the burger name before submitting</strong></p>
+            <textarea name="newBurger" id="textArea" class='d-block text-center' cols='40' rows="2"
+                placeholder="Your burger here"></textarea>
+            <button class='btn btn-primary submit' name='submit' id='submit' name='submit'>Submit</button>
+        </div>
+
+        <div class="col-xs devoured-container" id='devouredContainer'>
+                {{#each devoured}}
+                <div class="devoured">
+                    <p>{{this.id}}. {{this.burger_name}}</p>
+                    <button id="{{this.id}}" name='trashBtn' class='btn btn-danger trashBtn'>TOSS TRASH!</button>
+                </div>
+                {{/each}}
+        </div>
+        
+    </div>
+
+</div>
